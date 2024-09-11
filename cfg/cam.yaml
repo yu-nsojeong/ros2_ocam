@@ -1,0 +1,7 @@
+ocam_node:
+  ros__parameters:
+    exposure: 100       # 기본값: 100, 범위: 1~625
+    gain: 32            # 기본값: 32, 범위: 0~255
+    wb_blue: 200        # 기본값: 200, 범위: 0~250
+    wb_red: 150         # 기본값: 150, 범위: 0~250
+    auto_exposure: true # 기본값: True

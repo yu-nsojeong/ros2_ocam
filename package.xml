@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ocam</name>
+  <version>0.0.1</version>
+  <description>The oCam-1CGN-U package</description>
+
+  <maintainer email="dave.park@withrobot.com">Sangwoo Park</maintainer>
+  <license>BSD</license>
+  <author email="dave.park@withrobot.com">Sangwoo Park</author>
+
+  <!-- 빌드 도구 의존성 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- 빌드 시 의존성 -->
+  <build_depend>camera_info_manager</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>rclcpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+
+  <!-- 실행 시 의존성 -->
+  <exec_depend>camera_info_manager</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <!-- 패키지 export -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
