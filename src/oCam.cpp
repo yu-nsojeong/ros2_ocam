@@ -1,3 +1,15 @@
+/*
+ *  oCam.cpp
+ *
+ *  Created on: Oct 6, 2015
+ *      Author: gnohead
+ *
+ *  Modified on: Sep 12, 2024
+ *      Modified by: Yoon SoJeong
+ *      Changes: Migrated from ROS1 to ROS2 Humble.
+ *
+ */
+
 #include <rclcpp/rclcpp.hpp>
 #include <opencv2/opencv.hpp>
 #include <cv_bridge/cv_bridge.h>
