@@ -719,9 +719,13 @@ int Camera::get_control(const char* name)
 bool Camera::set_control(const char* name, const int value)
 {
     std::map<std::string, v4l2_queryctrl>::iterator it = valid_control_list.find(name);
-    if (it == valid_control_list.end()) {
-        std::cout<<"frist"<<std::endl;
 
+    //control command print
+    // for (const auto& pair : valid_control_list) {
+    // std::cout << "Name: " << pair.first << ", Control ID: " << pair.second.id << std::endl;
+    // }
+
+    if (it == valid_control_list.end()) {
         return false;
     }
 
@@ -733,7 +737,6 @@ bool Camera::set_control(const char* name, const int value)
 
     if (xioctl(VIDIOC_S_CTRL, &control) == -1 && errno != ERANGE) {
         DBG_PERROR("VIDIOC_S_CTRL");
-        std::cout<<"second"<<std::endl;
         return false;
     }
 

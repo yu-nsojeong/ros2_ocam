@@ -54,7 +54,6 @@ public:
          * get current camera format (image size and frame rate)
          */
         camera->get_current_format(camFormat);
-        std::cout<<"okokok"<<std::endl;
         camFormat.print();
 
         /* Withrobot camera start */
@@ -123,28 +122,17 @@ public:
 
         /* Gain Setting */
         camera->set_control("Gain", gain);
-        std::cout<<"gain : "<<camera->set_control("Gain", gain)<<std::endl;
 
         /* White Balance Setting */
 
-        camera->set_control("White Balance Blue Component", blue);
-        camera->set_control("White Balance Red Component", red);
-        std::cout<<"blue : "<<camera->set_control("White Balance Blue Component", blue)<<std::endl;
-        std::cout<<"red : "<<camera->set_control("White Balance Red Component", red)<<std::endl;
-
-        std::cout<<"ae : "<<ae<<std::endl;
-
-
-
-        ae = 1;
+        camera->set_control("Blue Balance", blue);
+        camera->set_control("Red Balance", red);
 
         /* Auto Exposure Setting */
         if (ae)
             camera->set_control("Exposure, Auto", 0x3);
         else
             camera->set_control("Exposure, Auto", 0x1);
-
-
 
     }
 

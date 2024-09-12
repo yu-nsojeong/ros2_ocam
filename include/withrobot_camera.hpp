@@ -271,6 +271,17 @@ namespace Withrobot {
         inline std::string get_dev_name() { return std::string((const char*) v4l2_s.capability.card); }
         std::string get_serial_number();
 
+        /**
+         * 디버깅 제공 함수
+         */
+
+        void debug_print()
+        {
+            std::cout<<"enumerate_controls"<<std::endl;
+            enumerate_controls();
+
+        }
+
     private:
         struct _buffer {
             unsigned char* buffer;

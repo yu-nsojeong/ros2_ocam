@@ -10,12 +10,12 @@ def generate_launch_description():
         name='ocam',
         output='screen',
         parameters=[
-          {'resolution': 2},  # 0: 1280x960, 1: 1280x720, 2: 640x480, 3: 640x360
+          {'resolution': 0},  # 0: 1280x960, 1: 1280x720, 2: 640x480, 3: 640x360
           {'frame_rate': 15.0},
           {'exposure': 150},
-          {'gain': 30},
-          {'wb_blue': 40},
-          {'wb_red': 220},
+          {'gain': 100},
+          {'wb_blue': 250},
+          {'wb_red': 130},
           {'auto_exposure': False},
           {'show_image': True},
           ]
